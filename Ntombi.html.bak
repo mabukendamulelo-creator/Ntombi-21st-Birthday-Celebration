@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ntombi's 21st Birthday</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: black;
+    color: gold;
+    text-align: center;
+}
+
+/* Cover (closed invitation) */
+.cover {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cover button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: gold;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cover button:hover {
+    background: #d4af37;
+}
+
+/* Hidden invitation */
+.invitation {
+    display: none;
+    padding: 20px;
+}
+
+/* Card styling */
+.card {
+    background: #111;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 20px gold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card img {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid gold;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.details {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- CLOSED INVITATION -->
+<div class="cover">
+    <h1>You're Invited 🎉</h1>
+    <button onclick="openInvitation()">Open Invitation</button>
+</div>
+
+<!-- OPENED INVITATION -->
+<div class="invitation" id="invitation">
+    <div class="card">
+        
+		 
+		<h1 id = "callName">WELCOME TO:</h1>
+		
+        <!-- IMAGE -->
+        <img src="Ntombi 0530.jpeg" alt="Ntombi">
+
+        <h1>Ntombi's 21st Birthday</h1>
+        <p>✨ A Night of Elegance ✨</p>
+
+        <div class="details">
+            <p><strong>Date:</strong> 13 June 2026</p>
+            <p><strong>Venue:</strong> Elim Mutonga</p>
+            <p><strong>Theme:</strong> Black & Gold 🖤✨</p>
+        </div>
+
+        <p style="margin-top:20px;">
+            Join us as we celebrate a special milestone! 🎂🥂
+        </p>
+
+    </div>
+</div>
+
+<script>
+function openInvitation() {
+    document.querySelector(".cover").style.display = "none";
+    document.getElementById("invitation").style.display = "block";
+}
+</script>
+
+</body>
+</html>
